@@ -61,7 +61,7 @@ form.addEventListener("submit", async (event) => {
 console.log("Original URL:", url);
 console.log("Encoded URL:", encodedUrl);
 
-newTab("https://fantastic-carnival-975695q6769x3p5xx-8080.app.github.dev" + encodedUrl);
+newTab("https://madegg.servehttp.com" + encodedUrl);
 
 });
 
