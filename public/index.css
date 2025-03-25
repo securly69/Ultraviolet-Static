@@ -138,7 +138,7 @@ html, body {
 
 
 #nav-bar-address {
-  width: 1219px;
+  width: calc(100vw - 313px);
   height: 30px;
   font-size: 16px;
   margin-top: 5px;
