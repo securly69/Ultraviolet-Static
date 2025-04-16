@@ -2,7 +2,7 @@ var currentTabId = 0;
 var currentTab = 0;
 var tabIds = [];
 
-function newTab(url = "https://madegg.servehttp.com" + __uv$config.prefix + __uv$config.encodeUrl("https://google.com")) {
+function newTab(url = "https://524vfr-8080.csb.app" + __uv$config.prefix + __uv$config.encodeUrl("https://google.com")) {
   var el = document.getElementById("tabBarTabs");
   var tabId = getTabId();
   el.innerHTML += `<div class="tabBarTab w3-bar-item" id="tab` + tabId + `" style="width: 225px" onclick="openTab(` + tabId + `)">
