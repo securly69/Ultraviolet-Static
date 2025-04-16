@@ -61,7 +61,7 @@ form.addEventListener("submit", async (event) => {
 console.log("Original URL:", url);
 console.log("Encoded URL:", encodedUrl);
 
-newTab("https://madegg.servehttp.com" + encodedUrl);
+newTab("https://524vfr-8080.csb.app/" + encodedUrl);
 
 });
 
