@@ -11,15 +11,8 @@ const connection   = new BareMux.BareMuxConnection("/baremux/worker.js");
 
 function checkSecureConnection() {
   const httpsLockIcon = document.getElementById("https-lock");
-  if (location.protocol === "https:") {
-    httpsLockIcon.textContent = "lock";
-    httpsLockIcon.title = "Encrypted (HTTPS)";
-  } else {
-    httpsLockIcon.textContent = "no_encryption";
-    httpsLockIcon.title = "No Encryption (HTTP)";
-  }
+  httpsLockIcon.textContent = location.protocol === "https:" ? "lock" : "no_encryption";
 }
-
 checkSecureConnection();
 
 function getActiveIframe() {
@@ -109,15 +102,15 @@ function newTab(url = __uv$config.prefix + __uv$config.encodeUrl("https://google
   const el    = document.getElementById("tabBarTabs");
   const tabId = getTabId();
   el.innerHTML += 
-    <div class="tabBarTab w3-bar-item" id="tab${tabId}" style="width:225px" onclick="openTab(${tabId})">
+    `<div class="tabBarTab w3-bar-item" id="tab${tabId}" style="width:225px" onclick="openTab(${tabId})">
       <div style="display:inline-flex;align-items:center;width:170px;overflow-x:hidden;white-space:nowrap;cursor:default;">
-        <img id="favicon-${tabId}" style="width:25px;height:25px;margin-right:6px;object-fit:contain;vertical-align:middle;">
+        <img id="favicon-${tabId}" style="width:16px;height:16px;margin-right:4px;object-fit:contain;vertical-align:middle;">
         <span id="title-${tabId}" style="overflow:hidden;text-overflow:ellipsis;"></span>
       </div>
       <i class="fa-solid fa-xmark" style="cursor:pointer;float:right;line-height:1.5;"
          onclick="event.stopPropagation();this.parentNode.animate([{'width':'150px'},{'width':'0'}],{fill:'forwards',duration:125});
                   setTimeout(function(el){el.remove();closeTab('${tabId}');},100,this.parentElement);"></i>
-    </div>;
+    </div>`;
 
   const tab   = el.lastElementChild;
   setTimeout(() => tab.style.marginTop = "5px", 1);
@@ -183,13 +176,13 @@ function universalAdapter() {
     const dec = __uv$config.decodeUrl ? __uv$config.decodeUrl(enc) : atob(enc);
     const url = dec.slice(dec.indexOf("https://"));
 
-    document.getElementById(title-${tabIds[i]}).textContent =
+    document.getElementById(`title-${tabIds[i]}`).textContent =
       (frame.contentDocument && frame.contentDocument.title) ||
       url.split("/").pop() ||
       "untitled";
 
-    document.getElementById(favicon-${tabIds[i]}).src =
-      https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=${encodeURIComponent(url)}&size=256;
+    document.getElementById(`favicon-${tabIds[i]}`).src =
+      `https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=${encodeURIComponent(url)}`;
 
     if (tabIds[i] === currentTab) {
       navAddress.value = url;
