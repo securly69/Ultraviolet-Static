@@ -133,7 +133,8 @@ html, body {
   display: flex;
   color: white;
   gap: 10px;
-  background-color: rgb(29, 30, 34);
+  background-color: rgb(49 50 64);
+  height: 41px;
 }
 
 
