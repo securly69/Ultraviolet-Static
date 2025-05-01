@@ -40,7 +40,7 @@ async function handleSubmit(query) {
     await connection.setTransport("/epoxy/index.mjs", [{ wisp: wispUrl }]);
   }
 
-  const finalUrl = "https://legendary-memory-q74vq49v7vwj2954p-8080.app.github.dev" + encUrl;
+  const finalUrl = "https://crispy-fiesta-jj7r574rjrjgh4j9-8080.app.github.dev" + encUrl;
   iframe ? iframe.src = finalUrl : newTab(finalUrl);
 }
 
@@ -104,7 +104,7 @@ function newTab(url = __uv$config.prefix + __uv$config.encodeUrl("https://google
   el.innerHTML += 
     `<div class="tabBarTab w3-bar-item" id="tab${tabId}" style="width:225px" onclick="openTab(${tabId})">
       <div style="display:inline-flex;align-items:center;width:170px;overflow-x:hidden;white-space:nowrap;cursor:default;">
-        <img id="favicon-${tabId}" style="width:16px;height:16px;margin-right:4px;object-fit:contain;vertical-align:middle;">
+        <img id="favicon-${tabId}" style="width:25px;height:25px;margin-right:6px;object-fit:contain;vertical-align:middle;">
         <span id="title-${tabId}" style="overflow:hidden;text-overflow:ellipsis;"></span>
       </div>
       <i class="fa-solid fa-xmark" style="cursor:pointer;float:right;line-height:1.5;"
@@ -182,7 +182,7 @@ function universalAdapter() {
       "untitled";
 
     document.getElementById(`favicon-${tabIds[i]}`).src =
-      `https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=${encodeURIComponent(url)}`;
+      `https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=${encodeURIComponent(url)}&size=256`;
 
     if (tabIds[i] === currentTab) {
       navAddress.value = url;
