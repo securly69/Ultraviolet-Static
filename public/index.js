@@ -40,7 +40,7 @@ async function handleSubmit(query) {
     await connection.setTransport("/epoxy/index.mjs", [{ wisp: wispUrl }]);
   }
 
-  const finalUrl = "https://crispy-fiesta-jj7r574rjrjgh4j9-8080.app.github.dev" + encUrl;
+  const finalUrl = "https://pegleg.cbass92.org/active" + encUrl;
   iframe ? iframe.src = finalUrl : newTab(finalUrl);
 }
 
