@@ -1,84 +1,38 @@
-<!DOCTYPE html>
-<html>
-
-
-<head>
-  <title>Rizz Proxy</title>
+<html><head>
+  <title>Home</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Freeman&display=swap" rel="stylesheet">
-  <link rel="shortcut icon" content="favicon.ico" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=Freeman&amp;display=swap" rel="stylesheet">
+  <link rel="icon" type="image/x-icon" href="https://t3.gstatic.com/faviconV2?client=SOCIAL&amp;type=FAVICON&amp;fallback_opts=TYPE,SIZE,URL&amp;url=https://gointerstellar.app&amp;size=256">
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer">
+  <link rel="stylesheet" href="index.css">
+  <script src="search.js" defer=""></script>
+  <script src="baremux/index.js" defer=""></script>
+  <script src="index.js" defer=""></script>
+  <script src="epoxy/index.js" defer=""></script>
+  <script src="uv/uv.bundle.js" defer=""></script>
+  <script src="uv/uv.config.js" defer=""></script>
+  <script src="register-sw.js" defer=""></script>
 </head>
-<link rel="shortcut icon" content="favicon.ico" />
-<link rel="stylesheet" href="index.css" />
-<link rel="stylesheet" href="w3.css">
-<script src="search.js" defer></script>
-<script src="baremux/index.js" defer></script>
-<script src="index.js" defer></script>
-<script type="application/ld+json" defer></script>
- <script src="tabs.js" defer></script>
- <script src="epoxy/index.js" defer></script>
- <script src="uv/uv.bundle.js" defer></script>
- <script src="uv/uv.config.js" defer></script>
- <script src="register-sw.js" defer></script>
-</head>
-
 <body>
 
   <div id="proxy-div" class="hide-proxy-div">
-    <div id="proxy-nav-bar" class="w3-bar">
-      <div class="w3-bar-item w3-bar" id="tabBarTabs"></div>
-      <div class="w3-bar-item w3-display-container" id="newTab" onclick="newTab()">
-        <i class="material-icons w3-display-middle">add</i>
+    <div id="proxy-nav-bar">
+      <div id="tabBarTabs"><div class="tabBarTab active" id="tab1" onclick="openTab(1)" style="margin-top: 9px;">
+      <div class="tab-content">
+        <img id="favicon-1" class="tab-favicon" src="https://t3.gstatic.com/faviconV2?client=SOCIAL&amp;type=FAVICON&amp;fallback_opts=TYPE,SIZE,URL&amp;url=https%3A%2F%2Fgoogle.com&amp;size=256">
+        <span id="title-1" class="tab-title">Error</span>
+        <i class="fa-solid fa-xmark tab-close" onclick="event.stopPropagation();closeTab(1)"></i>
       </div>
-    
-      <div class="w3-bar-item" style="float: right; cursor: pointer; padding: 8px" onclick="goHome();">
-        <i class="material-icons">home</i>
-      </div>
-    </div>
-    
-    <div id="proxy-button-row" class="w3-bar">
-      <div class="w3-bar-item proxy-nav-bar-item" style="cursor: pointer; width: 24px;" onclick="goBack()">
-        <i class="material-icons">arrow_back</i>
-      </div>
-      <div class="w3-bar-item proxy-nav-bar-item" style="cursor: pointer; width: 24px;" onclick="goForward()">
-        <i class="material-icons">arrow_forward</i>
-      </div>
-      <div class="w3-bar-item proxy-nav-bar-item" style="cursor: pointer; width: 24px;" onclick="reloadPage()">
-        <i class="material-icons">refresh</i>
-      </div>
-      <div class="w3-bar-item proxy-nav-bar-item" style="cursor: default; width: 24px;">
-        <i id="https-lock" class="material-icons">pending</i>
-      </div>
-      <div class="w3-bar-item" style="padding: 0;">
-        <form id="nav-bar-form">
-          <input id="nav-bar-address" class="w3-input w3-round" type="text" placeholder="Search the web" />
-          <input id="uv-search-engine" value="https://www.google.com/search?q=%s" type="hidden" />
-          <input id="uv-start-page" value="https://google.com" type="hidden">
-        </form>
-      </div>
-      <div class="w3-bar-item proxy-nav-bar-item" style="cursor: pointer; padding: 8px;" onclick="windowPopout();">
-        <i class="material-icons">open_in_new</i>
-      </div>
-      <div class="w3-bar-item proxy-nav-bar-item" style="cursor: pointer; padding: 8px;" onclick="proxyFullscreen();">
-        <i class="material-icons">fullscreen</i>
+    </div></div>
+      <div id="newTab" onclick="newTab()">
+        <i class="fa-solid fa-circle-plus fa-lg"></i>
       </div>
     </div>
-    
-    <span id="frames">
-    </span>
-  </div>
 
-  <div class="search-box w3-display-container">
-    <form id="uv-form" class="w3-display-middle">
-      <input id="uv-search-engine" value="https://www.google.com/search?q=%s" type="hidden" />
-      <p class="title">RIZZ PROXY</p>
-      <p class="subtitle">THE RIZZIEST WEB PROXY</p>
-      <input id="uv-address" autocomplete="off" class="w3-input" type="text" placeholder="Search the web" />
-    </form>
-  </div>
-</body>
-</html>
+    <div id="proxy-button-row">
+      <div class="proxy-nav-bar-item" style="cursor: pointer; width: 24px;" onclick="goBack()">
+        <i class="fas fa-arrow-left fa-lg"></i>
+      </di
