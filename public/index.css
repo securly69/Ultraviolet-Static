@@ -1,54 +1,159 @@
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-  background-image: linear-gradient(to bottom, rgb(56, 67, 73), rgb(47, 80, 99));
+  font-family: "Futura", Futura, serif;
+  background-image: url(https://images.weserv.nl/?url=cdn.dribbble.com/users/234525/screenshots/5853076/eggsacrosstheuniverse.jpg);
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  overflow: hidden;
+  padding: 10px;
 }
 
-html, body {
-  height: 100%;
-  margin: 0;
+h1 {
+  font-family: "Futura", Futura, serif;
+  font-size: 2.2rem;
+  margin-bottom: 15px;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+h1:hover {
+  transform: scale(1.1);
+}
+
+.time-date {
+  font-family: "Futura", Futura, serif;
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+  transition: transform 0.3s ease;
+}
+
+.time-date:hover {
+  transform: scale(1.1);
+}
+
+.search-container {
+  width: 80%;
+  max-width: 600px;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.input {
+  font-family: "Futura", Futura, serif;
+  width: 100%;
+  padding: 20px;
+  border: none;
+  border-radius: 20px;
+  font-size: 1rem;
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.input::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+  font-family: "Futura", Futura, serif;
+}
+
+.input:hover {
+  background: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
 }
 
 .search-box {
   text-align: center;
-  height: calc(100vh - 80px);
-  margin: 0;
+  margin-bottom: 15px;
 }
 
 #uv-address {
-  text-align: center;
-  width: 35vw;
-  height: 60px;
-  font-size: 24px;
+  font-family: "Futura", Futura, serif;
+  width: 705px;
+  padding: 20px;
   border: none;
-  background-color: rgb(29, 30, 34);
-  color: rgb(255, 255, 255);
-  border-radius: 24px;
-  transition: border-radius 0.5s;
+  border-radius: 20px;
+  font-size: 1rem;
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  transition: background 0.3s ease, box-shadow 0.3s ease;
 }
 
-#uv-address:focus {
-  border-radius: 4px;
+#uv-address::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+  font-family: "Futura", Futura, serif;
 }
 
-.title {
-  font-family: "Freeman", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 75px;
-  margin: 0;
+#uv-address:hover {
+  background: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
 }
 
-.subtitle {
-  font-family: "Oswald", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
-  margin: 0;
-  margin-bottom: 15px;
-  font-size: 25px;
+.bookmarks {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  opacity: 0;
+  animation: enterBookmarks 1s forwards 0.5s;
+  width: 100%;
+  max-width: 800px;
+  text-align: center;
+  margin-top: 15px;
+}
+
+.bookmark {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: white;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 10px;
+  border-radius: 15px;
+  width: 120px;
+  height: 120px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.bookmark img {
+  margin: auto;
+  height: 40px;
+  width: auto;
+  transition: transform 0.3s ease;
+}
+
+.bookmark span {
+  font-size: 0.9rem;
+  margin: auto;
+  font-family: "Futura", Futura, serif;
+}
+
+.bookmark:hover {
+  transform: scale(1.05);
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.bookmark img:hover {
+  transform: rotate(10deg) scale(1.1);
 }
 
 @keyframes show-proxy-div {
@@ -90,7 +195,7 @@ html, body {
   height: 100vh;
   margin: 0;
   padding: 0;
-  background-color: rgb(0, 0, 0);
+  background-color: rgb(30, 35, 55);
   animation-name: hide-proxy-div;
   animation-duration: 0.5s;
   z-index: 10;
@@ -107,7 +212,7 @@ html, body {
   height: 100vh;
   margin: 0;
   padding: 0;
-  background-color: white;
+  background-color: rgb(255, 255, 255);
   animation-name: show-proxy-div;
   animation-duration: 0.5s;
   z-index: 10;
@@ -124,19 +229,23 @@ html, body {
 }
 
 #proxy-nav-bar {
-  height: 40px;
-  background-color: rgb(29, 30, 34);
-  color: white;
+  height: 45px;
+  background-color: rgb(35, 45, 75);
+  color: rgb(255, 255, 255);
+  width: 100%;
+  overflow: hidden;
 }
 
 #proxy-button-row {
   display: flex;
-  color: white;
+  color: rgb(255, 255, 255);
   gap: 10px;
-  background-color: rgb(49 50 64);
+  background-color: rgb(61 74 112);
   height: 41px;
+  align-items: center;
+  width: 100%;
+  overflow: hidden;
 }
-
 
 #nav-bar-address {
   width: calc(100vw - 293px);
@@ -146,52 +255,310 @@ html, body {
   margin-bottom: 5px;
   margin-left: 15px;
   border: none;
-  color: white;
-  background-color: rgb(29, 30, 34);
+  color: rgb(255, 247, 206);
+  background-color: rgb(35, 45, 75);
   transition: background-color 0.3s;
+  border-radius: 10px;
+  padding: 8px;
 }
 
 #nav-bar-address:focus {
-  background-color: rgb(55, 58, 70);
-}
-
-#w3-bar-item {  
-border-color: white;
+  background-color: rgb(55, 65, 95);
 }
 
 #nav-bar-form {
   height: 40px;
   margin: 0;
   padding: 0;
-  
+  display: flex;
+  justify-content: center;
 }
 
 .tabBarTab {
-  background-color: rgb(49, 50, 64);
-  margin-top: 45px;
+  position: relative;
+  padding: 10px 20px;
+  background-color: transparent;
+  border-radius: 8px 8px 0 0;
+  color: rgb(255, 230, 100);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  height: 40px;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  min-width: 200px;
+  max-width: 225px;
   margin-left: 5px;
-  height: 45px;
-  border-radius: 8px;
-  float: left; 
-  padding: 8px;
-  transition-property: margin-top, background-color;
-  transition-duration: 0.25s;
+  padding: 8px 16px;
+  float: left;
+  width: auto;
+  border: none;
+  display: block;
+  outline: 0;
+}
+
+.tabBarTab.active {
+  background-color: rgb(62 74 112) !important;
+  color: rgb(255, 255, 255) !important;
+  cursor: default;
+}
+
+.tabBarTab:hover:not(.active) {
+  background-color: rgb(49 67 123);
+  border-radius: 16px;
+  color: rgb(255, 255, 250);
+  height: 36px !important;
+  transform: translateY(-5px);
+}
+
+.tab-content {
+  display: flex;
+  align-items: center;
+  width: calc(100% - 20px);
+  overflow: hidden;
+}
+
+.tab-favicon {
+  width: 25px;
+  height: 25px;
+  margin-right: 6px;
+  object-fit: contain;
+}
+
+.tab-title {
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  padding-right: 4px;
+}
+
+.tab-close {
+  cursor: pointer;
+  border-radius: 50%;
+  transition: background-color 0.2s;
+}
+
+.tab-close:hover {
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
 #newTab {
-  background-color: rgb(49, 50, 64);
-  margin-top: 5px;
-  margin-bottom: 5px;
-  margin-left: 10px;
-  height: 35px;
-  width: 35px;
-  border-radius: 8px;
-  float: left; 
-  padding: 0px;
+  height: 40px;
+  width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   cursor: pointer;
+  background: none;
+  border-radius: 8px;
+  margin: 5px 0 5px 4px;
+  padding: 8px 16px;
+  float: left;
+  width: auto;
+  border: none;
 }
 
 #tabBarTabs {
   margin: 0;
   padding: 0;
+}
+
+.proxy-nav-bar-item {
+  color: rgb(255, 230, 100);
+  padding: 8px 16px;
+  float: left;
+  width: auto;
+  border: none;
+  display: block;
+  outline: 0;
+}
+
+.tabBarTab .fa-xmark:hover {
+  color: rgb(255, 255, 180);
+}
+
+.tabBarTab .fa-xmark {
+  color: rgb(255, 230, 100);
+  background: transparent;
+}
+
+#newTab {
+  color: rgb(255, 230, 100);
+}
+
+#newTab:hover {
+  animation: bounce 0.5s ease-out forwards;
+  color: rgb(255, 255, 180);
+}
+
+#proxy-button-row .fa-arrow-right:hover {
+  cursor: pointer;
+  animation: bounceForward 0.5s ease-out forwards;
+  color: rgb(255, 255, 180);
+}
+
+#proxy-button-row .fa-arrow-left:hover {
+  cursor: pointer;
+  animation: bounceBackward 0.5s ease-out forwards;
+  color: rgb(255, 255, 180);
+}
+
+#proxy-button-row .fa-redo:hover {
+  cursor: pointer;
+  animation: spin 0.7s forwards;
+  color: rgb(255, 255, 180);
+}
+
+#proxy-button-row .fa-home:hover {
+  cursor: pointer;
+  animation: bounce 0.5s ease-out forwards;
+  color: rgb(255, 255, 180);
+}
+
+#proxy-button-row .fa-up-right-from-square:hover {
+  animation: bounce 0.5s ease-out forwards;
+  color: rgb(255, 255, 180);
+}
+
+#proxy-button-row .fa-expand:hover {
+  animation: bounce 0.5s ease-out forwards;
+  color: rgb(255, 255, 180);
+}
+
+@keyframes bounceForward {
+  0% { transform: translateX(0); }
+  30% { transform: translateX(4.6px); }
+  50% { transform: translateX(-2px); }
+  70% { transform: translateX(1px); }
+  100% { transform: translateX(0); }
+}
+
+@keyframes bounceBackward {
+  0% { transform: translateX(0); }
+  30% { transform: translateX(-4.6px); }
+  50% { transform: translateX(2px); }
+  70% { transform: translateX(-1px); }
+  100% { transform: translateX(0); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes bounce {
+  0% { transform: scale(1) translateZ(0); }
+  30% { transform: scale(1.07) translateZ(15px); }
+  50% { transform: scale(0.9) translateZ(5px); }
+  70% { transform: scale(1.07) translateZ(8px); }
+  100% { transform: scale(1) translateZ(0); }
+}
+
+.add-bookmark {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 15px;
+  cursor: pointer;
+  font-family: "Futura", Futura, serif;
+  font-size: 1rem;
+  color: white;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  transition: background 0.3s ease, transform 0.3s ease;
+  width: 120px;
+  height: 120px;
+}
+
+.add-bookmark:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: scale(1.1);
+}
+
+.add-bookmark-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.8);
+  border-radius: 15px;
+  color: white;
+  display: none;
+  flex-direction: column;
+  gap: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+.add-bookmark-modal input {
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  width: 100%;
+}
+
+.add-bookmark-modal button {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background: #5192f5;
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.add-bookmark-modal button:hover {
+  background: #3e81e6;
+}
+
+.top-right-menu, .top-left-menu {
+  position: absolute;
+  top: 10px;
+}
+
+.top-right-menu {
+  right: 10px;
+}
+
+.top-left-menu {
+  left: 10px;
+}
+
+.menu-button {
+  padding: 15px;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  border-radius: 25px;
+  cursor: pointer;
+  font-family: "Futura", Futura, serif;
+  font-size: 1.1rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  transition: background 0.3s ease, transform 0.3s ease;
+  border-color: transparent;
+}
+
+.menu-button:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: scale(1.1);
+}
+
+.rotating-text {
+  font-family: "Futura", Futura, serif;
+  font-size: 1.5rem;
+  color: white;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+  margin-top: 20px;
+  min-height: 2em;
+}
+
+@keyframes enterBookmarks {
+  to {
+    opacity: 1;
+    backdrop-filter: blur(1px);
+  }
 }
