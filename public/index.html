@@ -35,4 +35,109 @@
     <div id="proxy-button-row">
       <div class="proxy-nav-bar-item" style="cursor: pointer; width: 24px;" onclick="goBack()">
         <i class="fas fa-arrow-left fa-lg"></i>
-      </di
+      </div>
+      <div class="proxy-nav-bar-item" style="cursor: pointer; width: 24px;" onclick="goForward()">
+        <i class="fas fa-arrow-right fa-lg"></i>
+      </div>
+      <div class="proxy-nav-bar-item" style="cursor: pointer; width: 24px;" onclick="reloadPage()">
+        <i class="fas fa-redo fa-lg"></i>
+      </div>
+      <div class="proxy-nav-bar-item" style="cursor: pointer;width: 24px;" onclick="goHome()">
+        <i class="fas fa-home fa-lg"></i>
+      </div>
+      <div style="padding: 0;">
+        <form id="nav-bar-form">
+          <input id="nav-bar-address" type="text" placeholder="Search the web">
+          <input id="uv-search-engine" value="https://www.bing.com/search?q=" type="hidden">
+          <input id="uv-start-page" value="https://google.com" type="hidden">
+        </form>
+      </div>
+      <div class="proxy-nav-bar-item" style="cursor: pointer; padding: 8px;" onclick="windowPopout();">
+        <i class="fa-solid fa-up-right-from-square fa-lg"></i>
+      </div>
+      <div class="proxy-nav-bar-item" style="cursor: pointer; padding: 8px;" onclick="proxyFullscreen();">
+        <i class="fas fa-expand fa-lg"></i>
+      </div>
+    </div>
+
+    <span id="frames"><iframe src="/uv/service/hvtrs8%2F-gmoelg.aoo" class="tab" id="frame1" style="width: 100%; height: 100%; border: none; display: block;"></iframe></span>
+  </div>
+
+  <h1>MadEgg Proxy</h1>
+  <div class="top-right-menu">
+    <button class="menu-button" onclick="SHS()">Search History Spammer</button>
+  </div>
+
+  <div class="top-left-menu">
+    <button class="menu-button" onclick="AB()">About:blank Cloaker</button>
+  </div>
+
+  <div class="time-date" id="time-date">Tuesday, May 13, 2025, 04:48:50 PM</div>
+
+  <div class="search-box">
+  <div class="search-containeraa">
+    <button class="search-engine-dropdownaa" onclick="toggleDropdown(0)">
+      <img id="selected-engine-0" src="https://t3.gstatic.com/faviconV2?client=SOCIAL&amp;type=FAVICON&amp;fallback_opts=TYPE,SIZE,URL&amp;url=http://bing.com&amp;size=256" alt="Google">
+    </button>
+    <form id="uv-form">
+      <input id="uv-search-engine" type="hidden" value="https://www.google.com/search?q=">
+      <input id="uv-address" autocomplete="off" class="input" type="text" placeholder="Enter a search query or URL">
+    </form>
+    <div class="dropdown-contentaa" id="engineDropdown-0" style="display: none;">
+      <div class="status-messageaa" id="statusMessage-0">Using Bing</div>
+      <a href="javascript:void(0);" data-engine="https://www.google.com/search?q=" onclick="selectEngine(
+           'https://t3.gstatic.com/faviconV2?client=SOCIAL&amp;type=FAVICON&amp;fallback_opts=TYPE,SIZE,URL&amp;url=http://google.com&amp;size=256',
+           'https://www.google.com/search?q=',
+           0
+         )">
+        <img src="https://t3.gstatic.com/faviconV2?client=SOCIAL&amp;type=FAVICON&amp;fallback_opts=TYPE,SIZE,URL&amp;url=http://google.com&amp;size=256" alt="Google">
+        Google
+      </a>
+      <a href="javascript:void(0);" data-engine="https://search.brave.com/search?q=" onclick="selectEngine(
+           'https://t3.gstatic.com/faviconV2?client=SOCIAL&amp;type=FAVICON&amp;fallback_opts=TYPE,SIZE,URL&amp;url=http://brave.com&amp;size=256',
+           'https://search.brave.com/search?q=',
+           0
+         )">
+        <img src="https://t3.gstatic.com/faviconV2?client=SOCIAL&amp;type=FAVICON&amp;fallback_opts=TYPE,SIZE,URL&amp;url=http://brave.com&amp;size=256" alt="Brave">
+        Brave
+      </a>
+      <a href="javascript:void(0);" data-engine="https://www.bing.com/search?q=" onclick="selectEngine(
+           'https://t3.gstatic.com/faviconV2?client=SOCIAL&amp;type=FAVICON&amp;fallback_opts=TYPE,SIZE,URL&amp;url=http://bing.com&amp;size=256',
+           'https://www.bing.com/search?q=',
+           0
+         )">
+        <img src="https://t3.gstatic.com/faviconV2?client=SOCIAL&amp;type=FAVICON&amp;fallback_opts=TYPE,SIZE,URL&amp;url=http://bing.com&amp;size=256" alt="Bing">
+        Bing
+      </a>
+    </div>
+  </div>
+</div>
+
+  <div class="bookmarks" id="bookmarks">
+    <a href="javascript:void(0)" class="bookmark" onclick="navigateBookmark('https://www.youtube.com')">
+      <img src="https://t3.gstatic.com/faviconV2?client=SOCIAL&amp;type=FAVICON&amp;fallback_opts=TYPE,SIZE,URL&amp;url=https://youtube.com&amp;size=256" alt="YouTube">
+      <span>YouTube</span>
+    </a>
+    <a href="javascript:void(0)" class="bookmark" onclick="navigateBookmark('https://twitter.com')">
+      <img src="https://t3.gstatic.com/faviconV2?client=SOCIAL&amp;type=FAVICON&amp;fallback_opts=TYPE,SIZE,URL&amp;url=https://twitter.com&amp;size=256" alt="Twitter">
+      <span>Twitter</span>
+    </a>
+    <a href="javascript:void(0)" class="bookmark" onclick="navigateBookmark('https://discord.com')">
+      <img src="https://t3.gstatic.com/faviconV2?client=SOCIAL&amp;type=FAVICON&amp;fallback_opts=TYPE,SIZE,URL&amp;url=https://discord.com&amp;size=256" alt="Discord">
+      <span>Discord</span>
+    </a>
+    <a href="javascript:void(0)" class="bookmark" onclick="navigateBookmark('https://www.nvidia.com/en-us/geforce-now/')">
+      <img src="https://t3.gstatic.com/faviconV2?client=SOCIAL&amp;type=FAVICON&amp;fallback_opts=TYPE,SIZE,URL&amp;url=https://nvidia.com&amp;size=256" alt="GeForce Now">
+      <span>GeForce Now</span>
+    </a>
+    <div class="add-bookmark" id="add-bookmark">+ Add Bookmark</div>
+  </div>
+  <div class="rotating-text" id="rotating-text">You texted them, they didn</div>
+  <div class="add-bookmark-modal" id="add-bookmark-modal">
+    <input type="text" id="bookmark-name" placeholder="Bookmark Name">
+    <input type="text" id="bookmark-url" placeholder="Bookmark URL">
+    <button id="save-bookmark">Save</button>
+  </div>
+
+
+</body></html>
